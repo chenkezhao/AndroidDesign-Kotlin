@@ -21,6 +21,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        //从目录更明显地区分Kotlin文件和Java文件
+        //1.By default, new Kotlin files are saved into src/main/java/.
+        //2.you can put Kotlin files under src/main/kotlin/ instead.
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
 }
 
 dependencies {
