@@ -3,6 +3,7 @@ package com.example.aaron.androiddesign_kotlin.activity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.graphics.drawable.DrawerArrowDrawable
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**
@@ -24,4 +25,15 @@ abstract class BaseActivity : AppCompatActivity(){
     open fun setTitle(title:String = "AndroidDesign-Kotlin"){
         toolbarTitle = title
     }
+
+    open fun initBack() {
+        enableHomeAsUp { onBackPressed() }
+    }
+
+    fun enableHomeAsUp(up: () -> Unit) {
+        toolbar.navigationIcon = createUpDrawable()
+        toolbar.setNavigationOnClickListener { up() }
+    }
+
+    private fun createUpDrawable() = DrawerArrowDrawable(this).apply { progress = 1f }
 }
