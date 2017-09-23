@@ -5,13 +5,14 @@ import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import com.example.aaron.androiddesign_kotlin.R
-import com.example.aaron.androiddesign_kotlin.adapter.MainMenuAdapter
 import com.example.aaron.androiddesign_kotlin.adapter.MainMenuRVAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
+import org.jetbrains.anko.startActivity
 
 class MainActivity : BaseActivity() {
     var menuArr = arrayOf("菜单一","菜单二","菜单三","...")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,7 +26,12 @@ class MainActivity : BaseActivity() {
                 orientation = LinearLayoutManager.VERTICAL
             }
             //2.adapter
-            adapter = MainMenuRVAdapter(menuArr,MainMenuRVAdapter.P_VIEWTYPE_LISTDATA)
+            adapter = MainMenuRVAdapter(menuArr,MainMenuRVAdapter.P_VIEWTYPE_LISTDATA){
+                //Anko提供了简单得多的方式通过reified function来启动一个activity
+//                Toast.makeText(this@MainActivity,"来啊",Toast.LENGTH_LONG).show()
+                startActivity<FragmentActivity>()
+//                startActivity(Intent(this@MainActivity,FragmentActivity::class.java))
+            }
         }
 
     }

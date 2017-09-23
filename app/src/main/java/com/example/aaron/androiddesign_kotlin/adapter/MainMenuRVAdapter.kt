@@ -2,22 +2,22 @@ package com.example.aaron.androiddesign_kotlin.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.example.aaron.androiddesign_kotlin.R
 import kotlinx.android.synthetic.main.item_menu.view.*
 
 /**
- *
+ *注：参数var menus: Array<String>，则val itemClick: (String)
  * Created by Administrator on 2017/9/23.
  */
-class MainMenuRVAdapter(arrs: Array<String>, viewType: Int) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MainMenuRVAdapter(var menus: Array<String>, var viewType: Int, val itemClick: (String) -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
-        const val P_VIEWTYPE_LISTDATA:Int = 1;
+        const val P_VIEWTYPE_LISTDATA: Int = 1
     }
-    private var menus = arrs
-    private var viewType = viewType
 
     override fun getItemViewType(position: Int): Int {
         return viewType//super.getItemViewType(position)
@@ -26,7 +26,7 @@ class MainMenuRVAdapter(arrs: Array<String>, viewType: Int) : RecyclerView.Adapt
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
         var layoutInflater = LayoutInflater.from(parent?.context)
         if (P_VIEWTYPE_LISTDATA == viewType) {
-            return ViewHolder1(layoutInflater.inflate(R.layout.item_menu, parent, false) as TextView)
+            return ViewHolder1(layoutInflater.inflate(R.layout.item_menu, parent, false) as TextView, itemClick)
         } else {
             return ViewHolder404(layoutInflater.inflate(R.layout.view_404, parent, false) as TextView)
         }
@@ -35,6 +35,7 @@ class MainMenuRVAdapter(arrs: Array<String>, viewType: Int) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
         if (holder is ViewHolder1) {
             holder.bindData(menus[position])
+
         } else if (holder is ViewHolder404) {
             holder.bindData()
         }
@@ -43,9 +44,13 @@ class MainMenuRVAdapter(arrs: Array<String>, viewType: Int) : RecyclerView.Adapt
     override fun getItemCount(): Int = menus.size
 
 
-    class ViewHolder1(itemView: TextView?) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder1(itemView: TextView?, private val itemClick: (String) -> Unit) : RecyclerView.ViewHolder(itemView) {
         fun bindData(text: String) {
             itemView.tvMenu.text = text
+            itemView.setOnClickListener { itemClick(text) }
+//            itemView.setOnClickListener(View.OnClickListener {
+//                Toast.makeText(itemView.context,"来了啊",Toast.LENGTH_LONG).show()
+//            })
         }
     }
 
