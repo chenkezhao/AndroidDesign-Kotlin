@@ -2,18 +2,17 @@ package com.example.aaron.androiddesign_kotlin.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import com.example.aaron.androiddesign_kotlin.R
 import kotlinx.android.synthetic.main.item_menu.view.*
+import java.io.Serializable
 
 /**
  *注：参数var menus: Array<String>，则val itemClick: (String)
  * Created by Administrator on 2017/9/23.
  */
-class MainMenuRVAdapter(var menus: Array<String>, var viewType: Int, val itemClick: (String) -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MainMenuRVAdapter(var menus: Array<Array<Serializable>>, var viewType: Int, val itemClick: (Array<Serializable>) -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         const val P_VIEWTYPE_LISTDATA: Int = 1
@@ -44,10 +43,12 @@ class MainMenuRVAdapter(var menus: Array<String>, var viewType: Int, val itemCli
     override fun getItemCount(): Int = menus.size
 
 
-    class ViewHolder1(itemView: TextView?, private val itemClick: (String) -> Unit) : RecyclerView.ViewHolder(itemView) {
-        fun bindData(text: String) {
-            itemView.tvMenu.text = text
-            itemView.setOnClickListener { itemClick(text) }
+    class ViewHolder1(itemView: TextView?, val itemClick: (Array<Serializable>) -> Unit) : RecyclerView.ViewHolder(itemView) {
+        fun bindData(arr: Array<Serializable>) {
+            arr.apply {
+                itemView.tvMenu.text = this[0].toString()
+                itemView.setOnClickListener { itemClick(this) }
+            }
 //            itemView.setOnClickListener(View.OnClickListener {
 //                Toast.makeText(itemView.context,"来了啊",Toast.LENGTH_LONG).show()
 //            })

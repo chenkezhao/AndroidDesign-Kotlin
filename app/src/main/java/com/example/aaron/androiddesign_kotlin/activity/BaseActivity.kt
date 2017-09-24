@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.toolbar.*
  *
  * Created by aaron on 2017/9/22.
  */
-abstract class BaseActivity : AppCompatActivity(){
+abstract class BaseActivity : AppCompatActivity() {
 
     var toolbarTitle: String
         get() = toolbar?.title.toString()
@@ -18,11 +18,12 @@ abstract class BaseActivity : AppCompatActivity(){
             toolbar?.title = value
         }
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
     }
 
-    open fun setTitle(title:String = "AndroidDesign-Kotlin"){
+    open fun setTitle(title: String = "AndroidDesign-Kotlin") {
         toolbarTitle = title
     }
 
