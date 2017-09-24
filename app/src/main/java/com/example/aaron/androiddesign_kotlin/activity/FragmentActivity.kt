@@ -11,6 +11,8 @@ class FragmentActivity : BaseActivity(), OneFragment.OnFragmentInteractionListen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment)
+        setTitle(intent.getStringExtra("title")!!)
+        initBack()
 
         flContainer.apply {
             var oneFragment = OneFragment.newInstance("参数1","参数2")

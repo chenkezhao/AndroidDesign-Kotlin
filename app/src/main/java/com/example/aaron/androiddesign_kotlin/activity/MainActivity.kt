@@ -33,7 +33,9 @@ class MainActivity : BaseActivity() {
                 //Anko提供了简单得多的方式通过reified function来启动一个activity
 //                Toast.makeText(this@MainActivity,"${it[0]} Clicked", Toast.LENGTH_LONG).show()
 //                startActivity<FragmentActivity>()
-                startActivity(Intent(this@MainActivity, it[1] as Class<*>))
+                var intent = Intent(this@MainActivity, it[1] as Class<*>);
+                intent.putExtra("title",it[0])
+                startActivity(intent)
 //                startActivity(Intent(this@MainActivity,FragmentActivity::class.java))
             }
         }

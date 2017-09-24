@@ -16,7 +16,7 @@ class SharedPreferencesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_preferences)
-        setTitle()
+        setTitle(intent.getStringExtra("title")!!)
         initBack()
 
         etKey.apply {
@@ -58,6 +58,11 @@ class SharedPreferencesActivity : BaseActivity() {
                 val editable = SpannableStringBuilder(SharedPreferencesUtils(this@SharedPreferencesActivity).getString(etKey.text.toString(), ""))
                 etValue.text = editable
             }
+        }
+
+        btnReset.setOnClickListener {
+            etKey.text = SpannableStringBuilder("")
+            etValue.text = SpannableStringBuilder("")
         }
     }
 }
