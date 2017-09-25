@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".activity.FragmentActivity" />
         <activity android:name=".activity.SharedPreferencesActivity" />
-        <activity android:name=".activity.TabLayoutActivity"></activity>
+        <activity android:name=".activity.TabLayoutActivity" />
+        <activity android:name=".activity.ToolbarActivity"></activity>
     </application>
 
 </manifest>
