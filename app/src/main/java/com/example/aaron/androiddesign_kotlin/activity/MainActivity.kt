@@ -14,7 +14,9 @@ class MainActivity : BaseActivity() {
     //    var menuArr = arrayOf("菜单一","菜单二","菜单三","...")
     val arrs = arrayOf(
             arrayOf("Fragment Demo", FragmentActivity::class.java),
-            arrayOf("SharedPreferences API(应用保存键值集)", SharedPreferencesActivity::class.java))
+            arrayOf("SharedPreferences API(应用保存键值集)", SharedPreferencesActivity::class.java),
+            arrayOf("AppBarLayout、TabLayout、ViewPager", TabLayoutActivity::class.java)
+    )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +36,7 @@ class MainActivity : BaseActivity() {
 //                Toast.makeText(this@MainActivity,"${it[0]} Clicked", Toast.LENGTH_LONG).show()
 //                startActivity<FragmentActivity>()
                 var intent = Intent(this@MainActivity, it[1] as Class<*>);
-                intent.putExtra("title",it[0])
+                intent.putExtra("title", it[0])
                 startActivity(intent)
 //                startActivity(Intent(this@MainActivity,FragmentActivity::class.java))
             }

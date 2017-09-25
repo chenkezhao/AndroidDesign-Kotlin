@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.FragmentActivity" />
-        <activity android:name=".activity.SharedPreferencesActivity"></activity>
+        <activity android:name=".activity.SharedPreferencesActivity" />
+        <activity android:name=".activity.TabLayoutActivity"></activity>
     </application>
 
 </manifest>

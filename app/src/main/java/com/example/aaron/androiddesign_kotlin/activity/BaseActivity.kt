@@ -1,7 +1,6 @@
 package com.example.aaron.androiddesign_kotlin.activity
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.graphics.drawable.DrawerArrowDrawable
 import kotlinx.android.synthetic.main.toolbar.*
