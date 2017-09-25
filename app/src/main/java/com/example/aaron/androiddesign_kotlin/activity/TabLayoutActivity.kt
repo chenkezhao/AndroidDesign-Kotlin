@@ -13,9 +13,6 @@ class TabLayoutActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tab_layout)
-        setTitle(intent.getStringExtra("title")!!)
-        initBack()
-
         //第一步
         tblTitle.apply {
             addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{

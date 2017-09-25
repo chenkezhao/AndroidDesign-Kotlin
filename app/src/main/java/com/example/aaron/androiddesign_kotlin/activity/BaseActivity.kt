@@ -3,6 +3,7 @@ package com.example.aaron.androiddesign_kotlin.activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.graphics.drawable.DrawerArrowDrawable
+import com.example.aaron.androiddesign_kotlin.R
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**
@@ -22,6 +23,12 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 
+    override fun onStart() {
+        super.onStart()
+        setTitle(intent.getStringExtra("title")?:resources.getString(R.string.app_name))
+        initBack()
+    }
+
     open fun setTitle(title: String = "AndroidDesign-Kotlin") {
         toolbarTitle = title
     }
@@ -31,8 +38,8 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     fun enableHomeAsUp(up: () -> Unit) {
-        toolbar.navigationIcon = createUpDrawable()
-        toolbar.setNavigationOnClickListener { up() }
+        toolbar?.navigationIcon = createUpDrawable()
+        toolbar?.setNavigationOnClickListener { up() }
     }
 
     private fun createUpDrawable() = DrawerArrowDrawable(this).apply { progress = 1f }

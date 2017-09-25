@@ -16,9 +16,6 @@ class SharedPreferencesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_preferences)
-        setTitle(intent.getStringExtra("title")!!)
-        initBack()
-
         etKey.apply {
             addTextChangedListener(object : TextWatcher {
                 override fun afterTextChanged(p0: Editable?) {
