@@ -16,6 +16,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
         <!--
+        https://material.io/guidelines/patterns/scrolling-techniques.html#scrolling-techniques-behavior
         http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0717/3196.html
         AppBarLayout里面定义的view只要设置了app:layout_scrollFlags属性，就可以在RecyclerView滚动事件发生的时候被触发：
         1.enterAlways: 一旦向上滚动这个view就可见。
