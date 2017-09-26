@@ -7,4 +7,4 @@
 2.SharedPreferences<br>
 3.AppBarLayout、TabLayout、ViewPager、RecyclerView结合使用<br>
 4.ListView<br>
-5.Toolbar 内容与应用栏重叠<br>
+5.Toolbar 内容与应用栏重叠 、CoordinatorLayout\>AppBarLayout\>CollapsingToolbarLayout\>Toolbar<br>
