@@ -10,14 +10,14 @@ import android.view.MenuItem
 import com.example.aaron.androiddesign_kotlin.R
 import com.example.aaron.androiddesign_kotlin.adapter.MainMenuRVAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : BaseActivity() {
     val arrs = arrayOf(
             arrayOf("Fragment Demo", FragmentActivity::class.java),
             arrayOf("SharedPreferences API(应用保存键值集)", SharedPreferencesActivity::class.java),
             arrayOf("AppBarLayout、TabLayout、ViewPager", TabLayoutActivity::class.java),
-            arrayOf("Toolbar", ToolbarActivity::class.java)
+            arrayOf("Toolbar", ToolbarActivity::class.java),
+            arrayOf("NavigationDrawerActivity导航抽屉", NavigationDrawerActivity::class.java)
     )
 
 

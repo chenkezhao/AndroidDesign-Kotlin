@@ -22,6 +22,10 @@
         <activity
             android:name=".activity.ToolbarActivity"
             android:theme="@style/AppThemeStatusBar" />
+        <activity
+            android:name=".activity.NavigationDrawerActivity"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
