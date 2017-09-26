@@ -43,6 +43,9 @@ class DrawerLayoutActivity : AppCompatActivity() {
                 selectItem(position)
             }
         }
+
+        // Set the drawer toggle as the DrawerListener
+        drawerLayout.addDrawerListener(mDrawerToggle)
     }
 
     private fun selectItem(position: Int) {
