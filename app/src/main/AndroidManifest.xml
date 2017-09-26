@@ -26,7 +26,8 @@
             android:name=".activity.NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.DrawerLayoutActivity"></activity>
+        <activity android:name=".activity.DrawerLayoutActivity" />
+        <activity android:name=".activity.SlidingPaneLayoutActivity"></activity>
     </application>
 
 </manifest>
