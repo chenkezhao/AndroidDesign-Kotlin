@@ -2,6 +2,8 @@ package com.example.aaron.androiddesign_kotlin.activity
 
 import android.os.Bundle
 import android.support.v7.widget.StaggeredGridLayoutManager
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.example.aaron.androiddesign_kotlin.R
 import com.example.aaron.androiddesign_kotlin.adapter.BaseDataRVAdapter
@@ -24,16 +26,28 @@ class ToolbarActivity : BaseActivity() {
             }
         }
 
-        toolbar.apply {
-            inflateMenu(R.menu.menu_toolbar_activity)
-            setOnMenuItemClickListener {
-                when(it.itemId){
-                    R.id.sign_out ->finish()
-                    else -> Toast.makeText(this@ToolbarActivity,"Unknown option",Toast.LENGTH_SHORT).show()
-                }
-                true
-            }
-        }
+//        toolbar.apply {
+//            inflateMenu(R.menu.menu_toolbar_activity)
+//            setOnMenuItemClickListener {
+//                when(it.itemId){
+//                    R.id.sign_out ->finish()
+//                    else -> Toast.makeText(this@ToolbarActivity,"Unknown option",Toast.LENGTH_SHORT).show()
+//                }
+//                true
+//            }
+//        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_toolbar_activity, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return if (item.itemId == R.id.sign_out) {
+            finish()
+            true
+        } else super.onOptionsItemSelected(item)
     }
 
     private fun initData(): Array<String> {

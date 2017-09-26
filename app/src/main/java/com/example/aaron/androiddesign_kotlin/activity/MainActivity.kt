@@ -24,7 +24,6 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setUpToolbar()
         mainMenuRv.apply {
             //0.添加线条
             addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
@@ -46,11 +45,15 @@ class MainActivity : BaseActivity() {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        setUpToolbar()
+    }
+
     private fun setUpToolbar() {
 //        setSupportActionBar(findViewById<Toolbar>(R.id.toolbar))
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-        setTitle()
+        supportActionBar?.setHomeButtonEnabled(false)//置返回键不可用
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
     }
 
 
