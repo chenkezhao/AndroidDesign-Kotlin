@@ -48,7 +48,8 @@ dependencies {
 
     compile "org.jetbrains.anko:anko-common:$anko_version"
 
-//
+//    https://github.com/Kotlin/anko
+//    https://github.com/Kotlin/anko-example
 //    Anko consists of several parts:
 //    Anko Commons: a lightweight library full of helpers for intents, dialogs, logging and so on;
     compile "org.jetbrains.anko:anko-commons:$anko_version"
