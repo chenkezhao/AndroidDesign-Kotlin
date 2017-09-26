@@ -19,7 +19,9 @@
         <activity android:name=".activity.FragmentActivity" />
         <activity android:name=".activity.SharedPreferencesActivity" />
         <activity android:name=".activity.TabLayoutActivity" />
-        <activity android:name=".activity.ToolbarActivity"></activity>
+        <activity
+            android:name=".activity.ToolbarActivity"
+            android:theme="@style/AppThemeStatusBar" />
     </application>
 
 </manifest>

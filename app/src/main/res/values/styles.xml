@@ -14,6 +14,10 @@
 
     <style name="AppTheme" parent="BaseAppTheme"/>
 
+    <style name="AppThemeStatusBar" parent="AppTheme">
+        <item name="android:statusBarColor">@color/colorPrimaryDarkTransparent</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
         <item name="android:textColorPrimary">@color/colorTextPrimary</item>
     </style>
