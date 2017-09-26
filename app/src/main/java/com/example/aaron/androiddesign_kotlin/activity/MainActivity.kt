@@ -17,7 +17,8 @@ class MainActivity : BaseActivity() {
             arrayOf("SharedPreferences API(应用保存键值集)", SharedPreferencesActivity::class.java),
             arrayOf("AppBarLayout、TabLayout、ViewPager", TabLayoutActivity::class.java),
             arrayOf("Toolbar", ToolbarActivity::class.java),
-            arrayOf("NavigationDrawerActivity导航抽屉", NavigationDrawerActivity::class.java)
+            arrayOf("NavigationDrawerActivity导航抽屉", NavigationDrawerActivity::class.java),
+            arrayOf("DrawerLayoutActivity抽屉布局", DrawerLayoutActivity::class.java)
     )
 
 
