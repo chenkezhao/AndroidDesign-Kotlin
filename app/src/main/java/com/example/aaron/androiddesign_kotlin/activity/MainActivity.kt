@@ -19,7 +19,8 @@ class MainActivity : BaseActivity() {
             arrayOf("Toolbar", ToolbarActivity::class.java),
             arrayOf("NavigationDrawerActivity导航抽屉", NavigationDrawerActivity::class.java),
             arrayOf("DrawerLayoutActivity抽屉布局", DrawerLayoutActivity::class.java),
-            arrayOf("SlidingPaneLayoutActivity滑动面板", SlidingPaneLayoutActivity::class.java)
+            arrayOf("SlidingPaneLayoutActivity滑动面板", SlidingPaneLayoutActivity::class.java),
+            arrayOf("SwipeRefreshLayout", SwipeRefreshLayoutActivity::class.java)
     )
 
 
