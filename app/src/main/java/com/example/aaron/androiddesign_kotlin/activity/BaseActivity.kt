@@ -26,8 +26,8 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        setSupportActionBar(toolbar)
         setTitle(intent.getStringExtra("title")?:resources.getString(R.string.app_name))
+        setSupportActionBar(toolbar)
         initBack()
     }
 
