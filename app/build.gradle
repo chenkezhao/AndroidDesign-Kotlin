@@ -47,8 +47,15 @@ dependencies {
 
 
     compile "org.jetbrains.anko:anko-common:$anko_version"
-//    compile "org.jetbrains.anko:anko-sqlite:$anko_version"
-//    compile "org.jetbrains.anko:anko-coroutines:$anko_version"
+
+//
+//    Anko consists of several parts:
+//    Anko Commons: a lightweight library full of helpers for intents, dialogs, logging and so on;
+    compile "org.jetbrains.anko:anko-commons:$anko_version"
+//    Anko Layouts: a fast and type-safe way to write dynamic Android layouts;
+//    Anko SQLite: a query DSL and parser collection for Android SQLite;
+    compile "org.jetbrains.anko:anko-sqlite:$anko_version"
+//    Anko Coroutines: utilities based on the kotlinx.coroutines library.
 
 
 }
