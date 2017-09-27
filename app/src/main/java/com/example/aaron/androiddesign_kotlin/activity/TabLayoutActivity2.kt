@@ -14,7 +14,7 @@ class TabLayoutActivity2 : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tab_layout)
+        setContentView(R.layout.activity_tab_layout2)
         //第一步
         tblTitle.apply {
             addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
