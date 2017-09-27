@@ -5,6 +5,7 @@
 # 知识点列表
 1.Fragment<br>
 2.SharedPreferences<br>
-3.AppBarLayout、TabLayout、ViewPager、RecyclerView结合使用<br>
-4.ListView<br>
+3.AppBarLayout+TabLayout+ViewPager+PagerAdapter|FragmentPagerAdapter结合使用<br>
+4.ListView、RecyclerView<br>
 5.Toolbar 内容与应用栏重叠 、CoordinatorLayout\>AppBarLayout\>CollapsingToolbarLayout\>Toolbar<br>
+6.NavigationDrawer、DrawerLayout、SlidingPaneLayout、SwipeRefreshLayout
