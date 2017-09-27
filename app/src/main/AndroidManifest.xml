@@ -28,7 +28,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".activity.DrawerLayoutActivity" />
         <activity android:name=".activity.SlidingPaneLayoutActivity" />
-        <activity android:name=".activity.SwipeRefreshLayoutActivity"></activity>
+        <activity android:name=".activity.SwipeRefreshLayoutActivity" />
+        <activity android:name=".activity.TabLayoutActivity2"></activity>
     </application>
 
 </manifest>
