@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTextInPrimaryDark"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/ctl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:minHeight="0dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:id="@+id/ivBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/temp_img"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.5" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_overlapTop="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.aaron.androiddesign_kotlin.widget.AutoCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:minHeight="500px"
+                app:cardBackgroundColor="#f7ffffff"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="2dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7">
+
+                <TextView
+                    android:id="@+id/definitionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="48px"
+                    android:text=" \t\t\t\t狮子座的大概方位是在东偏北一点，水平高度40度左右的天空 区域，也是黄道星座。狮子座里的星在我国古代也很受重视，我国古人把它们喻为黄帝之神，称为轩辕。\n
+        \t\t\t\t狮子座的人喜爱交际，重视朋友，个性豪爽，有强大的领导能力，并且具有激发人心的气质，经常是团体中的焦点人物，具有坚忍不拔 的性格，极具王者之风。\n"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/content" />
+            </com.example.aaron.androiddesign_kotlin.widget.AutoCardView>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48px"
+                android:orientation="vertical"
+                android:paddingLeft="48px"
+                android:paddingRight="48px">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_dot" />
+
+                    <TextView
+                        android:id="@+id/characterTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性格特点—永不言退"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/title" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <TextView
+                    android:id="@+id/characterTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="48px"
+                    android:text=" \t\t\t\t狮子座属于火象星座，个性刚烈，对人生充满希望。天陚具有无穷的精 力和斗志，对恶势力永不低头，对挑战永不言败。但成龙还是成虫，在于狮 子座人对自身本性的开垦与发挥。若能改善缺点，将优点发扬，狮子座是一个最具潜质、最具发展空间的星座。"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/content" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_dot" />
+
+                    <TextView
+                        android:id="@+id/careerTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="事业特点——追求名利"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/title" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <TextView
+                    android:id="@+id/careerTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="48px"
+                    android:text=" \t\t\t\t狮子座属于火象星座，个性刚烈，对人生充满希望。天陚具有无穷的精 力和斗志，对恶势力永不低头，对挑战永不言败。但成龙还是成虫，在于狮 子座人对自身本性的开垦与发挥。若能改善缺点，将优点发扬，狮子座是一个最具潜质、最具发展空间的星座。"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/content" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_dot" />
+
+                    <TextView
+                        android:id="@+id/feelingTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="感情特点一疯狂投入"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/title" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <TextView
+                    android:id="@+id/feelingTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="48px"
+                    android:text=" \t\t\t\t狮子座属于火象星座，个性刚烈，对人生充满希望。天陚具有无穷的精 力和斗志，对恶势力永不低头，对挑战永不言败。但成龙还是成虫，在于狮 子座人对自身本性的开垦与发挥。若能改善缺点，将优点发扬，狮子座是一个最具潜质、最具发展空间的星座。"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/content" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#ffffff"
+        app:borderWidth="0dp"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+        app:srcCompat="@drawable/ic_collection" />
+</android.support.design.widget.CoordinatorLayout>

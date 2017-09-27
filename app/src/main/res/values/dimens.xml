@@ -22,4 +22,13 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="title">80px</dimen>
+    <dimen name="content">50px</dimen>
+    <dimen name="dp16">48px</dimen>
+    <dimen name="dp8">24px</dimen>
+    <dimen name="dp5">15px</dimen>
+    <dimen name="dp4">12px</dimen>
+    <dimen name="dp1">3px</dimen>
 </resources>

@@ -18,6 +18,7 @@ class MainActivity : BaseActivity() {
             arrayOf("AppBarLayout+TabLayout+ViewPager+PagerAdapter", TabLayoutActivity::class.java),
             arrayOf("AppBarLayout+TabLayout+ViewPager+FragmentPagerAdapter", TabLayoutActivity2::class.java),
             arrayOf("Toolbar", ToolbarActivity::class.java),
+            arrayOf("Toolbar2", ToolbarActivity2::class.java),
             arrayOf("NavigationDrawerActivity导航抽屉", NavigationDrawerActivity::class.java),
             arrayOf("DrawerLayoutActivity抽屉布局", DrawerLayoutActivity::class.java),
             arrayOf("SlidingPaneLayoutActivity滑动面板", SlidingPaneLayoutActivity::class.java),
