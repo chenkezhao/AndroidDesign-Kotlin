@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aaron.androiddesign_kotlin.activity.AnkoExampleActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnToast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="anko吐司(长按有惊喜啊)"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnSelectors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="alert dialog with a list of text items"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnPro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="progress dialog"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorDivider" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnInstall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="插入\n数据" />
+
+                <Button
+                    android:id="@+id/btnGetAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="显示\n数据" />
+
+                <Button
+                    android:id="@+id/btnDel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="删除\n数据" />
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="修改\n数据" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

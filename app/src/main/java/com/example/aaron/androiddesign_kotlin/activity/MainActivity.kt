@@ -22,7 +22,8 @@ class MainActivity : BaseActivity() {
             arrayOf("NavigationDrawerActivity导航抽屉", NavigationDrawerActivity::class.java),
             arrayOf("DrawerLayoutActivity抽屉布局", DrawerLayoutActivity::class.java),
             arrayOf("SlidingPaneLayoutActivity滑动面板", SlidingPaneLayoutActivity::class.java),
-            arrayOf("SwipeRefreshLayout", SwipeRefreshLayoutActivity::class.java)
+            arrayOf("SwipeRefreshLayout", SwipeRefreshLayoutActivity::class.java),
+            arrayOf("anko-example\nhttps://github.com/Kotlin/anko-example", AnkoExampleActivity::class.java)
     )
 
 
@@ -57,8 +58,11 @@ class MainActivity : BaseActivity() {
 
     private fun setUpToolbar() {
 //        setSupportActionBar(findViewById<Toolbar>(R.id.toolbar))
-        supportActionBar?.setHomeButtonEnabled(false)//置返回键不可用
-        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.apply {
+            setHomeButtonEnabled(false)//置返回键不可用
+            setDisplayHomeAsUpEnabled(false)
+            subtitle = "https://github.com/chenkezhao/"
+        }
     }
 
 
