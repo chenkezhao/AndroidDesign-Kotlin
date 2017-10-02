@@ -41,7 +41,10 @@
         <activity
             android:name=".activity.ToolbarActivity2"
             android:theme="@style/AppThemeStatusBar" />
-        <activity android:name=".activity.AnkoExampleActivity"></activity>
+        <activity android:name=".activity.AnkoExampleActivity" />
+        <activity
+            android:name=".activity.PagerActivity"
+            android:theme="@style/AppThemeStatusBar" />
     </application>
 
 </manifest>
