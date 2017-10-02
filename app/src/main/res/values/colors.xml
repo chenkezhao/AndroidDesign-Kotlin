@@ -20,6 +20,10 @@
     <!--波纹颜色-->
     <color name="colorControlHighlight">#45ffc107</color>
 
+    <!--Toolbar颜色-->
+    <color name="colorTextToolbarTitle">#212121</color>
+    <color name="colorTextToolbarSubTitle">#757575</color>
+
 
     <!-- dots active colors -->
     <color name="dot_light_screen1">#f98da5</color>

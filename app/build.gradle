@@ -60,8 +60,6 @@ dependencies {
 //    Anko Coroutines: utilities based on the kotlinx.coroutines library.
 
 
-
-
     compile 'com.zhy:autolayout:1.4.5'
 
 

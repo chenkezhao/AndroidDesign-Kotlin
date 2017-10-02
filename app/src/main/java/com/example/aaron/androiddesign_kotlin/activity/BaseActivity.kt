@@ -2,9 +2,11 @@ package com.example.aaron.androiddesign_kotlin.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.app.AppCompatDelegate
 import android.support.v7.graphics.drawable.DrawerArrowDrawable
 import android.view.MenuItem
 import com.example.aaron.androiddesign_kotlin.R
+import com.example.aaron.androiddesign_kotlin.utils.PreferencesUtils
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**
@@ -22,6 +24,12 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //夜间模式开启
+        if (PreferencesUtils(this).isNightMode()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
     }
 
     override fun onStart() {

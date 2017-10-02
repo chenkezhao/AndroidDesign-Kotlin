@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--默认主调背景色-->
+    <color name="colorPrimaryDefault">#607D8B</color>
+    <!--深暗主调背景色-->
+    <color name="colorPrimaryDark">#455A64</color>
+    <!--深暗主调背景色下的字体颜色-->
+    <color name="colorTextInPrimaryDark">#FFFFFF</color>
+    <!--高亮主调背景色-->
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <!--强调色-->
+    <color name="colorAccent">#795548</color>
+    <!--主级字体颜色-->
+    <color name="colorTextPrimary">#212121</color>
+    <!--次级字体颜色-->
+    <color name="colorTextSecondary">#757575</color>
+    <!--分隔线颜色-->
+    <color name="colorDivider">#BDBDBD</color>
+    <!--波纹颜色-->
+    <color name="colorControlHighlight">#45607D8B</color>
+    <!--Toolbar颜色-->
+    <color name="colorTextToolbarTitle">#FFFFFF</color>
+    <color name="colorTextToolbarSubTitle">#FFFFFF</color>
+</resources>

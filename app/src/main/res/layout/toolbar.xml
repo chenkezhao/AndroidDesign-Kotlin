@@ -10,6 +10,6 @@
         android:layout_height="?attr/actionBarSize"
         app:layout_collapseMode="pin"
         app:popupTheme="@style/AppTheme.PopupOverlay"
-        app:subtitleTextColor="@color/colorTextSecondary"/>
+        app:subtitleTextColor="@color/colorTextToolbarSubTitle"/>
 
 </android.support.design.widget.AppBarLayout>

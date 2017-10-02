@@ -10,6 +10,7 @@ import android.view.MenuItem
 import com.example.aaron.androiddesign_kotlin.R
 import com.example.aaron.androiddesign_kotlin.adapter.MainMenuRVAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.startActivity
 
 class MainActivity : BaseActivity() {
     val arrs = arrayOf(
@@ -68,7 +69,7 @@ class MainActivity : BaseActivity() {
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_toolbar_activity, menu)
+        menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
@@ -76,6 +77,11 @@ class MainActivity : BaseActivity() {
         return if (item.itemId == R.id.sign_out) {
             finish()
             true
-        } else super.onOptionsItemSelected(item)
+        } else if(item.itemId == R.id.setting){
+            //anko startActivity
+            startActivity<SettingActivity>()
+//            startActivity<SettingActivity2>("title" to "SETTING")
+            true
+        }else super.onOptionsItemSelected(item)
     }
 }
