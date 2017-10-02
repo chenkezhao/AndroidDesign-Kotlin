@@ -9,6 +9,7 @@ import android.content.Context
 class SharedPreferencesUtils(val context: Context) {
     companion object {
         val KEY_ISNIGHT = "is_night"
+        val KEY_RECREATE = "recreate"
     }
 
     val prefs by lazy {
@@ -22,6 +23,7 @@ class SharedPreferencesUtils(val context: Context) {
     fun getFloat(key: String?, default: Float = 0f): Float = prefs.getFloat(key, default)
     fun getString(key: String?, default: String?): String = prefs.getString(key, default)
     fun isNight(key: String?, default: Boolean = false): Boolean = prefs.getBoolean(key, default)
+    fun isRecreate(key: String?, default: Boolean = false): Boolean = prefs.getBoolean(key, default)
 
     fun setBoolean(key: String?, value: Boolean = false) = prefs.edit().putBoolean(key, value).apply()
     fun setInt(key: String?, value: Int = 0) = prefs.edit().putInt(key, value).apply()
@@ -29,6 +31,7 @@ class SharedPreferencesUtils(val context: Context) {
     fun setFloat(key: String?, value: Float = 0f) = prefs.edit().putFloat(key, value).apply()
     fun setString(key: String?, value: String?) = prefs.edit().putString(key, value).apply()
     fun setNight(key: String,value: Boolean) = prefs.edit().putBoolean(key, value).apply()
+    fun setRecreate(key: String,value: Boolean) = prefs.edit().putBoolean(key, value).apply()
 
 
 }
