@@ -79,8 +79,8 @@ class MainActivity : BaseActivity() {
             true
         } else if(item.itemId == R.id.setting){
             //anko startActivity
-            startActivity<SettingActivity>()
-//            startActivity<SettingActivity2>("title" to "SETTING")
+//            startActivity<SettingActivity>()
+            startActivity<SettingActivity2>("title" to "SETTING")
             true
         }else super.onOptionsItemSelected(item)
     }
