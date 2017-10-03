@@ -46,7 +46,11 @@
             android:name=".activity.PagerActivity"
             android:theme="@style/AppThemeStatusBar" />
         <activity android:name=".activity.SettingActivity" />
-        <activity android:name=".activity.SettingActivity2"/>
+        <activity android:name=".activity.SettingActivity2" />
+        <activity android:name=".activity.AnimationsActivity" />
+        <activity
+            android:name=".activity.ViewPagerSlidesActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

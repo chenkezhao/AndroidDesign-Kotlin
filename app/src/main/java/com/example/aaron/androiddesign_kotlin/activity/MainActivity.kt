@@ -25,7 +25,8 @@ class MainActivity : BaseActivity() {
             arrayOf("DrawerLayoutActivity抽屉布局", DrawerLayoutActivity::class.java),
             arrayOf("SlidingPaneLayoutActivity滑动面板", SlidingPaneLayoutActivity::class.java),
             arrayOf("SwipeRefreshLayout", SwipeRefreshLayoutActivity::class.java),
-            arrayOf("anko-example\nhttps://github.com/Kotlin/anko-example", AnkoExampleActivity::class.java)
+            arrayOf("anko-example\nhttps://github.com/Kotlin/anko-example", AnkoExampleActivity::class.java),
+            arrayOf("Animations动画", AnimationsActivity::class.java)
     )
 
 
