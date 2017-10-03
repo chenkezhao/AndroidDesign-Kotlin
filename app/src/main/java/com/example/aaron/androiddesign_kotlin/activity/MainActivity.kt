@@ -12,6 +12,10 @@ import com.example.aaron.androiddesign_kotlin.adapter.MainMenuRVAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
+/**
+ * https://developer.android.com/training/index.html
+ * Android培训
+ */
 class MainActivity : BaseActivity() {
     val arrs = arrayOf(
             arrayOf("Fragment Demo", FragmentActivity::class.java),
