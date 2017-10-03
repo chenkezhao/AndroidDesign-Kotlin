@@ -10,7 +10,8 @@ import kotlinx.android.synthetic.main.activity_animations.*
 
 class AnimationsActivity : BaseActivity() {
     private val arrs = arrayOf(
-            arrayOf("ViewPagerSlidesActivity屏幕幻灯片", ViewPagerSlidesActivity::class.java)
+            arrayOf("ViewPagerSlidesActivity屏幕幻灯片", ViewPagerSlidesActivity::class.java),
+            arrayOf("ZoomActivity缩放视图", ZoomActivity::class.java)
     )
 
 

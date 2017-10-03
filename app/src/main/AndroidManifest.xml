@@ -51,6 +51,7 @@
         <activity
             android:name=".activity.ViewPagerSlidesActivity"
             android:screenOrientation="landscape" />
+        <activity android:name=".activity.ZoomActivity"></activity>
     </application>
 
 </manifest>
